@@ -1,0 +1,34 @@
+{
+  "name": "BioMuteBot",
+  "description": "A Telegram bot that mutes users who have links or usernames in bio/messages.",
+  "keywords": ["telegram", "bot", "python", "moderation"],
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Your Telegram Bot Token from BotFather",
+      "value": "123456789:ABCDEF-YOUR-BOT-TOKEN"
+    },
+    "OWNER_ID": {
+      "description": "Your Telegram user ID (as integer)",
+      "value": "123456789"
+    },
+    "UPDATE_CHANNEL": {
+      "description": "Update channel username like @YourChannel",
+      "value": "@YourChannel"
+    },
+    "ABOUT_URL": {
+      "description": "URL to about button (optional)",
+      "value": "https://t.me/YourBot"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  }
+}
